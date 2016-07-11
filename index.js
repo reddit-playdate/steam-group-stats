@@ -7,7 +7,7 @@ var parser = new xml2js.Parser()
 
 var groupUrl = 'http://steamcommunity.com/groups/redditpd/memberslistxml/?xml=1'
 var getGamesUrl = function (userId) {
-  return `http://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=${process.env.API_KEY}&steamid=${userId}&format=json&include_appinfo=1`
+  return `http://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=${process.env.API_KEY}&steamid=${userId}&format=json&include_appinfo=1&include_played_free_games=1`
 }
 
 let memberList = []
